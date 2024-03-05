@@ -67,6 +67,7 @@ input {
 
 a {
     text-decoration: none;
+    background-image: none;
     background-color: hsl(234, 29%, 20%);
     color: white;
     font-weight: 700;
@@ -76,9 +77,21 @@ a {
     padding-bottom: 15px;
     border-radius: 7px;
     margin-top: 20px;
-    transition: 500ms all;
 }
 
 a:hover{
-    background-color: hsl(234, 27%, 15%);
+    animation-name: fadein;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    
+
+}
+
+@keyframes fadein {
+    100% {
+        background: linear-gradient(to right, #ff5476, #ff673e);
+        box-shadow: 0 4px 8px #ff5476;
+        scale: 1.03;
+    }
 }
